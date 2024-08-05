@@ -3,6 +3,7 @@ package com.easycoding.accounts.controller;
 import com.easycoding.accounts.dao.AccountsDAO;
 import com.easycoding.accounts.dao.CustomerDAO;
 import com.easycoding.accounts.dao.CustomerDetails;
+import com.easycoding.accounts.dao.config.AccountsContactInfoDto;
 import com.easycoding.accounts.enitity.Accounts;
 import com.easycoding.accounts.enitity.Customer;
 import com.easycoding.accounts.service.AccountService;
@@ -18,6 +19,10 @@ public class AccountsController {
 
     @Autowired
     private AccountService accountService;
+
+    @Autowired
+    private AccountsContactInfoDto accountsContactInfoDto;
+
 
     @Autowired
     private CardsClient cardsClient;
@@ -40,6 +45,10 @@ public class AccountsController {
         return ResponseEntity.status(HttpStatus.OK).body(customerDetails);
     }
 
+    @GetMapping("/contactInfo")
+    public ResponseEntity<AccountsContactInfoDto> getContactDetails(){
+        return ResponseEntity.status(HttpStatus.OK).body(accountsContactInfoDto);
+    }
 }
 
 

@@ -1,13 +1,18 @@
 spring:
   application:
-    name: "eurekaserver"
-  config:
-    import: "optional:configserver:http://localhost:8071/"
+    name: "configserver"
+  profiles:
+    # active: native
+    active: git
   cloud:
     config:
-      enabled: false
-      import-check:
-        enabled: false
+      server:
+        git:
+          uri: "https://github.com/Bala-Naga-Bharath-Katakam/spring-config.git"
+          default-label: main
+          timeout: 5
+          clone-on-start: true
+          force-pull: true
 
 management:
   endpoints:
@@ -26,18 +31,12 @@ management:
   metrics:
     tags:
       application: ${spring.application.name}
+
+encrypt:
+  key: "45D81EC1EF61DF9AD8D3E5BB397F9"
+
 server:
-  port: 8070
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8070/eureka/
-    register-with-eureka: false
-    fetch-registry: false
-  server:
-    enable-self-preservation: false
-
+  port: 8071
 
 logging:
   pattern:

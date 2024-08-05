@@ -1,6 +1,8 @@
 server:
   port: 7080
 spring:
+  config:
+    import: "optional:configserver:http://localhost:8071/"
   cloud:
     function:
       definition: updateCommunication
