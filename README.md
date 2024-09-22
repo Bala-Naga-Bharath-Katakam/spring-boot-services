@@ -33,7 +33,7 @@ This project implements a microservices architecture using Spring Boot. The main
 ```bash
 git clone <your-repository-url>
 cd <your-project-directory>
-
+```bash
 ## Architecture Diagram
 
 ```plaintext
