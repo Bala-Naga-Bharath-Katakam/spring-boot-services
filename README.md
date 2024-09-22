@@ -62,6 +62,5 @@ This project implements a microservices architecture using Spring Boot. The main
 ## Setup
 
 ### 1. Clone the Repository
-```bash
 git clone <your-repository-url>
 cd <your-project-directory>
