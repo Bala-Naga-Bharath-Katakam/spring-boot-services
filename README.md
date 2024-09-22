@@ -21,6 +21,19 @@ This project implements a microservices architecture using Spring Boot. The main
 - **Config Server**: Manages external configuration properties for all microservices.
 - **API Gateway**: Handles authentication and routing using Keycloak.
 
+## Prerequisites
+- Java 11 or higher
+- Maven 3.6 or higher
+- PostgreSQL (or another database of your choice)
+- Keycloak server (for authentication)
+
+## Setup
+
+### 1. Clone the Repository
+```bash
+git clone <your-repository-url>
+cd <your-project-directory>
+
 ## Architecture Diagram
 
 ```plaintext
@@ -53,15 +66,3 @@ This project implements a microservices architecture using Spring Boot. The main
        |     Config Server   |
        +---------------------+
 
-## Prerequisites
-- Java 11 or higher
-- Maven 3.6 or higher
-- PostgreSQL (or another database of your choice)
-- Keycloak server (for authentication)
-
-## Setup
-
-### 1. Clone the Repository
-```bash
-git clone <your-repository-url>
-cd <your-project-directory>
